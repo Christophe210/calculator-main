@@ -1,0 +1,64 @@
+body{
+    background-color: var(--color-background-body);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: poppins;
+}
+.calculator{
+    background-image: 
+        linear-gradient(140deg, #3B3E4C, #1E222F);
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 50px 150px 150px #2b2e36;
+}
+.calculator .screen{
+    height: 200px; 
+    padding-top: 50px;
+    color: #bbbbbb;
+    font-size: 50px;
+    text-align: right;
+}
+.calculator .screen .new{
+    color: #fff;
+    font-size: 80px;
+}
+.calculator .buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(5, 70px);
+    gap: 10px;
+}
+.calculator .buttons button{
+    border-radius: 20px;
+    border: none;   
+    font-family: poppins;
+    font-size: x-large;
+    color: #efefef;
+    background-image: linear-gradient(140deg, #262B39, #323847);
+    box-shadow: inset 5px 5px 5px #323847,
+        inset -5px -5px 20px #323847,
+        5px 5px 5px #1d1f25;
+}
+.calculator .buttons button:nth-child(17){
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.calculator .buttons button:nth-child(-n+3){
+    background-image: linear-gradient(140deg, #3b424d, #5D697A);
+    box-shadow: inset 5px 5px 5px #5D697A,
+        inset -5px -5px 20px #5D697A,
+        5px 5px 5px #1d1f25;
+}
+.calculator .buttons button:nth-child(4n),
+.calculator .buttons button:nth-child(19){
+    background-image: linear-gradient(140deg, #BC5A17, #E09121);
+    box-shadow: inset 5px 5px 5px #E09121,
+        inset -5px -5px 20px #e99725,
+        5px 5px 5px #1d1f25;
+}
+.calculator .buttons button:active{
+    box-shadow: none;
+} 
